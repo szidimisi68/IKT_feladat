@@ -67,9 +67,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             File.ReadAllLines("kep.txt").ToList().ForEach(x =>
             {
                 List<string> sor = x.Split(";").ToList();
-                if (Convert.ToInt32(sor[1]) < 100)
+                if (Convert.ToInt32(sor[2]) < 100)
                 {
-                    sor[1] = (Convert.ToInt32(sor[1])+20).ToString();
+                    sor[2] = (Convert.ToInt32(sor[2])+20).ToString();
                 }
                 sorok.Add(sor[0] + ";" + sor[1] + ";" + sor[2]);
             });
